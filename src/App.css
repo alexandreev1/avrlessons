@@ -1,0 +1,48 @@
+.App {
+    text-align: center;
+    background-color: #38444c;
+    color: white;
+    font-size: calc(10px + 2vmin);
+    min-height: 100vh;
+}
+
+.App-header {
+    background-color: #38444c;
+    min-height: 92.6vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.description {
+    font-size: small;
+    margin-bottom: 3%;
+}
+
+.button {
+    margin-right: 10px;
+}
+
+.row {
+    margin-top: 7%;
+}
+
+.video {
+    min-height: 63.3vh;
+}
+
+.modall {
+    color: black;
+    font-size: large;
+}
+
+.myclass {
+    width: 80%;
+}
