@@ -1,10 +1,14 @@
 let dataBase = require('node-json-db');
 let videoDB = new dataBase("videoDB", true, false);
 let express = require('express');
+let path = require("path")
 let app = express();
 
 app.use(express.urlencoded());
 app.use(express.json());
+
+this.app.use(express.static(path.join(__dirname, "./public")));
+this.app.use("*", express.static(path.resolve()));
 
 app.post('/api/videos', function (req, res) {
     videoDB.push(('/videos[]'), req.body)
