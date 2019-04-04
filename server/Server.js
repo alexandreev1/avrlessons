@@ -7,8 +7,8 @@ let app = express();
 app.use(express.urlencoded());
 app.use(express.json());
 
-this.app.use(express.static(path.join(__dirname, "./public")));
-this.app.use("*", express.static(path.resolve()));
+app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "/build")));
 
 app.post('/api/videos', function (req, res) {
     videoDB.push(('/videos[]'), req.body)
@@ -23,6 +23,10 @@ app.delete('/api/videos', function (req, res) {
 
 app.get('/api/videos', function (req, res) {
     res.send(videoDB.getData("videoDB/videos"));
+});
+
+app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/../build/index.html'));
 });
 
 app.listen(4000,);
