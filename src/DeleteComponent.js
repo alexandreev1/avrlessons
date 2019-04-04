@@ -13,13 +13,13 @@ class DeleteComponent extends React.Component {
 
 
     handleShow = () => {
-        let access = prompt('Пароль?', '')
-        if (access === 'ytpyf.gfhjkz') {
+        let access = window.btoa(prompt('Пароль?', ''))
+        if (access === 'eXRweWYuZ2Zoamt6') {
             this.setState({show: true});
         } else if (access === '') {
             alert('Вам нужно ввести пароль, чтобы получить доступ к этой функции')
         } else {
-            alert('У Вас нет права удалять видео')
+            alert('Пароль неверен. У Вас нет права удалять видео')
         }
     };
 

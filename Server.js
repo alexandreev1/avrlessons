@@ -26,10 +26,10 @@ app.get('/api/videos', function (req, res) {
     res.send(videoDB.getData("/videos"));
 });
 
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
-app.listen(4000, () => {
+app.listen(3000, () => {
     console.log("Server listening on", 4000)
 });
