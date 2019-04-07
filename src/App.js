@@ -3,6 +3,7 @@ import './App.css';
 import YouTube from 'react-youtube';
 import AddComponent from './AddComponent.js';
 import DeleteComponent from './DeleteComponent.js';
+import {Navbar} from "react-bootstrap"
 
 class App extends Component {
 
@@ -79,6 +80,11 @@ class App extends Component {
                         />
                     </div>
                 </div>
+                <Navbar fixed="bottom" bg="dark" variant="dark">
+                    <Navbar.Text className = 'footer'>
+                        Copyright © 2019 <a href="https://vk.com/petabyte">Андреев Александр</a>
+                    </Navbar.Text>
+                </Navbar>
             </div>
         );
     };

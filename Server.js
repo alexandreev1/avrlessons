@@ -30,6 +30,6 @@ app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
-app.listen(3000, () => {
-    console.log("Server listening on", 3000)
+app.listen(4000, () => {
+    console.log("Server listening on", 4000)
 });
