@@ -1,8 +1,28 @@
 {
     "videos": [
         {
-            "videoId": "jDmyX4e0MZo",
-            "description": "Tanko"
+            "videoId": "34E9cAsTQWE",
+            "description": "Тема урока: бит, байт, системы исчисления"
+        },
+        {
+            "videoId": "hmRFcwonVGc",
+            "description": "Тема урока: Архитектура микроконтроллера AVR"
+        },
+        {
+            "videoId": "EkDvpXziBC0",
+            "description": "Тема урока: Порты ввода вывода в микроконтроллере atmega 16"
+        },
+        {
+            "videoId": "IUWTWqsi1rc",
+            "description": "Тема урока: Битовые операции и особенности компилятора в atmel studio"
+        },
+        {
+            "videoId": "NP1K_jPg3jg",
+            "description": "Тема урока: Как работает прерывания в микроконтроллере atmega 16 (часть 1)"
+        },
+        {
+            "videoId": "8H7FOQp19TM",
+            "description": "Тема урока: Прерывания INT0, INT1, INT2 в микроконтроллере atmega 16 (часть 2)"
         }
     ]
 }
