@@ -29,6 +29,12 @@ class PassCheck extends React.Component {
         this.props.closePassCheck();
     };
 
+    onEnterKeyPress = (e) => {
+        if(e.key === 'Enter') {
+            this.handleConfirm()
+        }
+    };
+
 
     render() {
         return (
@@ -44,7 +50,7 @@ class PassCheck extends React.Component {
                                     <label htmlFor="pass" className="col-form-label">Введите пароль:</label>
                                     <input type="password" className="form-control" id="pass"
                                            placeholder='Пароль?' value={this.state.pass}
-                                           onChange={this.onPassChange}/>
+                                           onChange={this.onPassChange} onKeyPress={this.onEnterKeyPress}/>
                                 </div>
                             </form>
                         </div>
