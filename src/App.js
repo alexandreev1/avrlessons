@@ -46,6 +46,8 @@ class App extends Component {
                 autoplay: 1
             }
         };
+        
+        /* eslint-disable */
 
         return (
             <div className='container-fluid App'>
