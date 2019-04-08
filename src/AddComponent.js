@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Modal} from "react-bootstrap";
+import PassCheck from './PassCheck.js'
 
 
 class AddComponent extends React.Component {
@@ -8,6 +9,7 @@ class AddComponent extends React.Component {
         show: false,
         videoId: '',
         description: '',
+        showPass: false
         //buttonName: ''
     };
 
@@ -20,14 +22,7 @@ class AddComponent extends React.Component {
     };
 
     handleShow = () => {
-        let access = window.btoa(prompt('Пароль?', ''))
-        if (access === 'eXRweWYuZ2Zoamt6') {
-            this.setState({show: true});
-        } else if (access === '') {
-            alert('Вам нужно ввести пароль, чтобы получить доступ к этой функции')
-        } else {
-            alert('Пароль неверен. У Вас нет права добавлять видео')
-        }
+        this.setState({show: true})
     };
 
     handlePost = () => {
@@ -60,6 +55,14 @@ class AddComponent extends React.Component {
         this.setState({description: e.target.value})
     };
 
+    handleShowPassCheck = () => {
+        this.setState({showPass: true})
+    };
+
+    handleClosePassCheck = () => {
+        this.setState({showPass: false})
+    };
+
     /*onBtnNameChange = (e) => {
         this.setState({buttonName: e.target.value})
     };*/
@@ -67,10 +70,12 @@ class AddComponent extends React.Component {
     render() {
         return (
             <>
-                <Button className='button' size="sm" variant="outline-primary" onClick={this.handleShow}>
+                <Button className='button' size="sm" variant="outline-primary" onClick={this.handleShowPassCheck}>
                     Добавить видео
                 </Button>
-
+                <PassCheck show={this.state.showPass}
+                           handleConfirm={this.handleShow}
+                           closePassCheck={this.handleClosePassCheck}/>
                 <Modal show={this.state.show} onHide={this.handleClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>Новое видео</Modal.Title>

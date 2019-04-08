@@ -64,7 +64,7 @@ class App extends Component {
                     <div className='col-md-2'>
                         {this.state.videos.map((videoObj, index) =>
                             <React.Fragment key={index}>
-                                <button className='col myclass btn btn-primary'
+                                <button className='col myclass btn btn-primary btn-sm'
                                         onClick={() => this.onClickHandler(videoObj.videoId)}>
                                     Начать урок
                                 </button>

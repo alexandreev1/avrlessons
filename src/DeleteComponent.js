@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button, Modal, Form} from "react-bootstrap";
+import PassCheck from './PassCheck.js'
 
 class DeleteComponent extends React.Component {
     state = {
         show: false,
-        index: 'default'
+        index: 'default',
+        showPass: false
     };
 
     onVideoDelete = () => {
@@ -13,14 +15,15 @@ class DeleteComponent extends React.Component {
 
 
     handleShow = () => {
-        let access = window.btoa(prompt('Пароль?', ''))
-        if (access === 'eXRweWYuZ2Zoamt6') {
-            this.setState({show: true});
-        } else if (access === '') {
-            alert('Вам нужно ввести пароль, чтобы получить доступ к этой функции')
-        } else {
-            alert('Пароль неверен. У Вас нет права удалять видео')
-        }
+        this.setState({show: true});
+    };
+
+    handleShowPassCheck = () => {
+        this.setState({showPass: true})
+    };
+
+    handleClosePassCheck = () => {
+        this.setState({showPass: false})
     };
 
     handleClose = () => {
@@ -53,9 +56,11 @@ class DeleteComponent extends React.Component {
     render() {
         return (
             <>
-                <Button variant="outline-danger" size="sm" onClick={this.handleShow}>
+                <Button variant="outline-danger" size="sm" onClick={this.handleShowPassCheck}>
                     Удалить видео
                 </Button>
+                <PassCheck show={this.state.showPass} handleConfirm={this.handleShow}
+                           closePassCheck={this.handleClosePassCheck}/>
                 <Modal show={this.state.show} onHide={this.handleClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>Удаление видео</Modal.Title>
