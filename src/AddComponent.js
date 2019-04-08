@@ -67,7 +67,7 @@ class AddComponent extends React.Component {
     render() {
         return (
             <>
-                <Button className='button' variant="primary" onClick={this.handleShow}>
+                <Button className='button' size="sm" variant="outline-primary" onClick={this.handleShow}>
                     Добавить видео
                 </Button>
 

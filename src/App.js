@@ -51,15 +51,15 @@ class App extends Component {
 
         return (
             <div className='container-fluid App'>
-                <div className='navbar navbar-dark bg-dark'>
-                    <a className='navbar-brend'>
+                <nav className="navbar navbar-dark bg-dark">
+                    <a className = "navbar-brand">
                         AVR Lessons
                     </a>
                     <form className='form-inline'>
                         <AddComponent onVideoAdd={this.loadVideos}/>
                         <DeleteComponent onVideoDelete={this.loadVideos} videos={this.state.videos}/>
                     </form>
-                </div>
+                </nav>
                 <div className='row'>
                     <div className='col-md-2'>
                         {this.state.videos.map((videoObj, index) =>

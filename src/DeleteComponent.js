@@ -53,7 +53,7 @@ class DeleteComponent extends React.Component {
     render() {
         return (
             <>
-                <Button variant="danger" onClick={this.handleShow}>
+                <Button variant="outline-danger" size="sm" onClick={this.handleShow}>
                     Удалить видео
                 </Button>
                 <Modal show={this.state.show} onHide={this.handleClose}>
