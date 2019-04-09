@@ -66,7 +66,7 @@ class DeleteComponent extends React.Component {
                         <Modal.Title>Удаление видео</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <div className="modal-body modall">
+                        <div>
                             <form>
                                 <div className="form-group">
                                     <Form.Group controlId="videoChoise">

@@ -81,7 +81,7 @@ class AddComponent extends React.Component {
                         <Modal.Title>Новое видео</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <div className="modal-body modall">
+                        <div>
                             <form>
                                 <div className="form-group">
                                     <label htmlFor="videoID" className="col-form-label">Введите ID:</label>

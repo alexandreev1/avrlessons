@@ -82,7 +82,7 @@ class App extends Component {
                         />
                     </div>
                 </div>
-                <Navbar fixed="bottom" bg="dark" variant="dark">
+                <Navbar sticky="bottom" bg="dark" variant="dark">
                     <Navbar.Text className = 'footer'>
                         Copyright © 2019 <a href="https://github.com/alexandreev1">Андреев Александр</a>
                     </Navbar.Text>

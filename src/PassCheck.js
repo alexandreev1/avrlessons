@@ -44,15 +44,13 @@ class PassCheck extends React.Component {
                         <Modal.Title>Подтверждение прав</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <div className="modal-body modall">
-                            <form>
-                                <div className="form-group">
+                        <div>
+                            <div className="form-group">
                                     <label htmlFor="pass" className="col-form-label">Введите пароль:</label>
                                     <input type="password" className="form-control" id="pass"
                                            placeholder='Пароль?' value={this.state.pass}
                                            onChange={this.onPassChange} onKeyPress={this.onEnterKeyPress}/>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
